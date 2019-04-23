@@ -1,0 +1,126 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+
+
+
+
+
+% my adds
+\usepackage{subcaption}
+
+
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\usepackage{xcolor,colortbl}
+% \usepackage{soul}
+% \usepackage{color}
+\definecolor{lightsteelblue}{RGB}{176,196,222}
+\definecolor{lightsteelred}{RGB}{230,176,160}
+\definecolor{lightsteellila}{RGB}{175,181,224}
+\definecolor{lightsteelgreen}{RGB}{182,214,207}
+
+
+% monica added this
+\usepackage{float}
+% for pink
+% \usepackage[dvipsnames]{xcolor}
+\begin{document}
+
+\title{Bilevel Optimization For Transformer Models}
+
+% \author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address}
+% \and
+% \IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address}
+% \and
+% \IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address}
+ \author{\IEEEauthorblockN{Anonymous ICDAR Submission}}
+
+
+\maketitle
+
+
+\newcommand{\etal}{\textit{et al}.}
+\newcommand{\ie}{\textit{i}.\textit{e}.~}
+\newcommand{\eg}{\textit{e}.\textit{g}.~}
+
+\newcommand{\mypar}[1]{\vspace{0.3cm}\noindent\textbf{#1}}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\begin{abstract}
+Optical character recognition is a key step towards automatically converting printed documents into electronic form. 
+In this work, we consider the specialized task of mathematical expression recognition, which is characterized by a highly structured format and strict syntax rules, where the slightest mistake can lead to a very different meaning of the formula.  
+To tackle this problem, we present a neural architecture based on a convolutional neural network focused specifically on fine-grained structures in the image.
+The obtained visual representations are used as an input to an encoder and an attention-based decoder module, trained jointly in an end-to-end manner.
+Given an input image, our model generates the underlying LaTeX markup that is able to perfectly describe the target mathematical formula.
+We conduct a thorough analysis of our model by examining the performance for different formula lengths and visualizing the attention maps of prediction examples.
+We demonstrate the effectiveness of our approach on the large-scale IM2LATEX-100K benchmark for mathematical expression recognition, where our model is able to outperform state-of-the-art methods, surpassing them by over~4\%~in image absolute accuracy.
+\end{abstract}
+
+
+
+\begin{IEEEkeywords}
+Offline Mathematical Expression Recognition, Deep Learning, Convolutional Neural Networks 
+\end{IEEEkeywords}
+
+
+
+
+\input{sections/introduction}
+
+
+
+
+% \clearpage%\mbox{}
+\input{sections/related_work}%1pg
+
+
+
+% \clearpage%\mbox{}
+\input{sections/methods}%1pg
+
+
+
+
+% \clearpage%\mbox{}
+\input{sections/evaluation} % 2pg
+
+\input{sections/analysis}% 1pg
+
+% \clearpage%\mbox{}
+\input{sections/conclusion}% 1pg
+
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,my}
+
+
+\end{document}
+
+
+

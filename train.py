@@ -9,7 +9,7 @@ import argparse
 import os, code
 import json
 from utils import *
-from Trainer import Trainer
+from ModelFactory import Model
 #code.interact(local=dict(globals(), **locals()))
 
 
@@ -79,8 +79,7 @@ base_config = {
     "attention_dropout" : 0.0, 
     "relu_dropout" : 0.0, 
     "use_mask" : False, 
-    "act" : False,
-    "meta_training" : False
+    "act" : False
 }
 
 repo = git.Repo(search_parent_directories=True)
